@@ -27,25 +27,20 @@ for i in range(num_people):
         personal_info['Counseling'][i] = 'Yes'
 
 #sleep details
-# Generate random sleep start and end times
 sleep_start_time_demo = np.random.randint(22, 27, num_people * num_days)
 sleep_end_time_demo = np.random.randint(23, 28, num_people * num_days)
 
 sleep_start_time = sleep_start_time_demo % 24
 sleep_end_time = (sleep_start_time_demo + 1) % 24
 
-# Generate random wake-up times
 wake_up_time_demo = np.random.randint(26, 34, num_people * num_days)
 wake_up_time = wake_up_time_demo % 24
 
-# Calculate hours of sleep
 duration_of_sleep = (wake_up_time_demo - sleep_start_time_demo) % 24 - 0.5
 
-# Generate mid-day naps and durations
 mid_day_naps = np.random.choice(['Yes', 'No'], num_people * num_days)
 mid_day_nap_durations = np.where(mid_day_naps == 'Yes', np.random.randint(1, 4, num_people * num_days), 0)
 
-# Create sleep details dictionary
 sleep_details = {
     'Sample ID': np.repeat(sample_ids, 14),
     'Count of Day': np.tile(np.arange(1, 14 + 1), num_people),

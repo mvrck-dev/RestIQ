@@ -1,4 +1,4 @@
-person ID,limitting / eliminating caffeine,limitting / eliminating alcohol,limitting / eliminating smoking,getting sunlight in the morning,getting exercise,wearing earplugs during sleep,falling asleep to sounds,journaling/reading books before bed,wearing eye mask,reducing blue light,bedroom tempereature
+﻿person ID,limitting / eliminating caffeine,limitting / eliminating alcohol,limitting / eliminating smoking,getting sunlight in the morning,getting exercise,wearing earplugs during sleep,falling asleep to sounds,journaling/reading books before bed,wearing eye mask,reducing blue light,bedroom temperature
 1,no,yes,yes,yes,no,yes,yes,yes,no,no,warm
 2,yes,yes,yes,no,yes,yes,no,no,no,yes,cool
 3,no,no,yes,yes,yes,yes,yes,yes,yes,no,cool
@@ -19,3 +19,4 @@ person ID,limitting / eliminating caffeine,limitting / eliminating alcohol,limit
 18,no,no,no,no,yes,no,no,yes,no,no,warm
 19,yes,yes,no,no,no,no,no,no,yes,yes,normal
 20,yes,yes,no,yes,no,no,no,no,yes,no,warm
+,,,,,,,,,,,

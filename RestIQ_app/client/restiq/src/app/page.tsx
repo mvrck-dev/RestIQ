@@ -10,7 +10,7 @@ import { Area, AreaChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis, Lege
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 // Mock data for sleep monitoring
-const sleepData = [
+'''const sleepData = [
   { time: '22:00', awake: 1, rem: 0, light: 0, deep: 0 },
   { time: '23:00', awake: 0.2, rem: 0, light: 0.8, deep: 0 },
   { time: '00:00', awake: 0, rem: 0, light: 0.3, deep: 0.7 },
@@ -48,9 +48,20 @@ const generateMonthData = () => {
   return data
 }
 
-const monthData = generateMonthData()
+const monthData = generateMonthData()'''
 
 export default function Dashboard() {
+  const [sleepData, setSleepData] = useState([])
+  const [energyData, setEnergyData] = useState([])
+  const [monthData, setMonthData] = useState([])
+  const [activeTab, setActiveTab] = useState('home')
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/sleep_data').then((res) => setSleepData(res.data))
+    axios.get('http://localhost:5000/energy_data').then((res) => setEnergyData(res.data))
+    axios.get('http://localhost:5000/month_data').then((res) => setMonthData(res.data))
+  }, [])
+ 
   const [activeTab, setActiveTab] = useState('home')
 
   const renderGithubLikeGraph = (data, key) => {
